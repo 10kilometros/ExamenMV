@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Examen.Caso3.Models.ClienteViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Listar Clientes</h1>
+</div>
+
+<ul class="menu">
+    <li>
+        <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Regresar al Menú</a>
+    </li>
+    <li>
+        <a class="nav-link text-dark" asp-controller="Cliente" asp-action="Crear">Crear Cliente</a>
+    </li>
+</ul>
+
+<br/>
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombres y Apellidos</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Fecha Registro</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td scope="row">@item.Id</td>
+                        <td>@item.NombresApellidos</td>
+                        <td>@item.Correo</td>
+                        <td>@item.FechaNacimiento</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.FechaRegistro</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
