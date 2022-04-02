@@ -1,0 +1,8 @@
+﻿CREATE DATABASE ClientTest
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'ClientTest', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\ClientTest.mdf' , SIZE = 5120KB , FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'ClientTest', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\ClientTest.ldf' , SIZE = 2048KB , FILEGROWTH = 10%)
+ COLLATE Latin1_General_CS_AI
+GO
